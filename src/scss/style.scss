@@ -2,6 +2,64 @@
 @use 'functions';
 @use 'abstracts';
 
+$cols: 1 2 3 4 5 6 7 8 9 10 11 12;
+
+@each $col in $cols {
+  .col-#{$col} {
+    width:  calc(100% / 12) * $col;
+  }
+}
+
+$displays: (
+  flex: flex,
+  block: block,
+  inline: inline-block
+);
+
+@each $name, $value in $displays {
+  .d-#{$name} {
+    display: $value;
+  }
+}
+
+$justifies: (
+  start: flex-start,
+  center: center,
+  end: flex-end,
+  between: space-between,
+  around: space-around
+);
+
+@each $key, $val in $justifies {
+  .justify-#{$key} {
+    justify-content: $val;
+  }
+}
+
+$items: (
+  start: flex-start,
+  center: center,
+  end: flex-end,
+  stretch: stretch
+);
+
+@each $key, $val in $items {
+  .items-#{$key} {
+    align-items: $val;
+  }
+}
+
+$cursors: (
+    help: help,
+    wait: wait,
+    cross: crosshair,
+);
+
+@each $key, $val in $cursors {
+    .cursor-#{$key} {
+        cursor: $val;
+    }
+}
 
 nav {
   ul {
