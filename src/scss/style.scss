@@ -16,3 +16,35 @@ nav {
     color: variables.$primary;
   }
 }
+
+@mixin card-base {
+    background: #fff;
+    border-radius: variables.$radius;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+        box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+        transform: translateY(-2px) scale(1.01);
+    }
+}
+
+.card {
+    @include card-base;
+
+    &__title {
+        font-size: 1.5rem;
+        color: variables.$primary;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+
+    &__body {
+        font-size: 1.125rem;
+        color: #333;
+        line-height: 1.7;
+    }
+}
