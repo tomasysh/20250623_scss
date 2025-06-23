@@ -1,0 +1,22 @@
+{
+  "name": "20250623_scss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasysh/20250623_scss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomasysh/20250623_scss/issues"
+  },
+  "homepage": "https://github.com/tomasysh/20250623_scss#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.7"
+  }
+}
