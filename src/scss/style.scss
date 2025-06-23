@@ -17,8 +17,8 @@ nav {
   }
 }
 
-@mixin card-base($bg: #fff) {
-    background: $bg;
+@mixin card-base {
+    background: #fff;
     border-radius: variables.$radius;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     padding: 1.5rem 1.25rem;
@@ -31,11 +31,14 @@ nav {
     }
 }
 
+// .btn .btn-primary
+// .btn .btn-danger
+
 .card {
     @include card-base;
 
-    &--info {
-        @include card-base(#009dff);
+    &-info {
+        background: lightblue;
     }
 
     &__title {
