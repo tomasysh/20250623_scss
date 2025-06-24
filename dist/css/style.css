@@ -107,16 +107,16 @@
   align-items: stretch;
 }
 
-.cursor-help {
-  cursor: help;
+.cursor-pointer {
+  cursor: pointer !important;
 }
 
 .cursor-wait {
-  cursor: wait;
+  cursor: wait !important;
 }
 
 .cursor-cross {
-  cursor: crosshair;
+  cursor: crosshair !important;
 }
 
 nav ul {

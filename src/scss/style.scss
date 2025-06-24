@@ -50,14 +50,14 @@ $items: (
 }
 
 $cursors: (
-    help: help,
+    pointer: pointer,
     wait: wait,
     cross: crosshair,
 );
 
 @each $key, $val in $cursors {
     .cursor-#{$key} {
-        cursor: $val;
+        cursor: $val !important;
     }
 }
 
