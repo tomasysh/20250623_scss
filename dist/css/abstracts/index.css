@@ -1,0 +1,17 @@
+body.theme-light {
+  --bg: #f7f7f7;
+  --text: #222;
+  --primary: #2a7ae4;
+  --secondary: #6ec1e4;
+  --primary-hover: rgb(27.3375, 108.3375, 215.6625);
+}
+
+body.theme-dark {
+  --bg: #10241b;
+  --text: #e6ffe6;
+  --primary: #1abc9c;
+  --secondary: #145a32;
+  --primary-hover: rgb(23.4, 169.2, 140.4);
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: var(--bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 16px 0;
+  position: relative;
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+/* 新增：手機版漢堡選單樣式 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--parimary);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+  nav {
+    float: none;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: var(--bg);
+    width: 180px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    z-index: 100;
+  }
+  nav.active {
+    display: flex;
+  }
+  nav a {
+    margin: 16px 0 0 24px;
+    font-size: 1.1rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
