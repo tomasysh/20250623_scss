@@ -1,17 +1,20 @@
 @use "sass:map";
 @use "sass:color";
 
+
 // 1. 主題色資料
 $themes: (
   light: (
-    bg: #ffffff,
-    text: #222222,
-    primary: #1e90ff,
+    bg: #f7f7f7,
+    text: #222,
+    primary: #2a7ae4,
+    secondary: #6ec1e4,
   ),
   dark: (
     bg: #121212,
     text: #e6e6e6,
     primary: #90caf9,
+    secondary: #6ec1e4,
   )
 );
 

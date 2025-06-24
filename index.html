@@ -6,7 +6,7 @@
   <title>現代電商購物網站</title>
   <link rel="stylesheet" href="dist/css/main.css">
 </head>
-<body>
+<body class="theme-light">
   <header>
     <div class="container">
       <h1 class="logo">ShopNow</h1>
@@ -43,6 +43,10 @@
       </div>
     </section>
   </main>
+  
+    <button type="button" class="btn" data-theme="light">Light</button>
+    <button type="button" class="btn" data-theme="dark">Dark</button>
+
   <footer>
     <div class="container">
       <p>&copy; 2025 ShopNow. All rights reserved.</p>
@@ -54,6 +58,12 @@
     const nav = document.querySelector('header nav');
     hamburger.addEventListener('click', function() {
       nav.classList.toggle('active');
+    });
+
+    // 切換主題配色
+    document.addEventListener('click', e => {
+        if (!e.target.dataset.theme) return;
+        document.body.className = `theme-${e.target.dataset.theme}`;
     });
   </script>
 </body>

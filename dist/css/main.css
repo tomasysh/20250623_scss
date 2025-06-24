@@ -1,9 +1,25 @@
 @charset "UTF-8";
+body.theme-light {
+  --bg: #f7f7f7;
+  --text: #222;
+  --primary: #2a7ae4;
+  --secondary: #6ec1e4;
+  --primary-hover: rgb(27.3375, 108.3375, 215.6625);
+}
+
+body.theme-dark {
+  --bg: #121212;
+  --text: #e6e6e6;
+  --primary: #90caf9;
+  --secondary: #6ec1e4;
+  --primary-hover: rgb(106.7153846154, 184.1974358974, 246.9846153846);
+}
+
 body {
   font-family: "Segoe UI", "Noto Sans TC", Arial, sans-serif;
   margin: 0;
-  background: #f7f7f7;
-  color: #222;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .container {
@@ -34,7 +50,7 @@ nav {
 }
 
 nav a {
-  color: #222;
+  color: var(--text);
   text-decoration: none;
   margin-left: 24px;
   font-size: 1rem;
@@ -85,6 +101,22 @@ nav a {
   .hamburger {
     display: flex;
   }
+}
+.hero {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px 60px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 32px;
 }
 
 /*# sourceMappingURL=main.css.map */
