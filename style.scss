@@ -1,86 +1,13 @@
 /* style.css - 現代電商風格樣式 */
+$lightwhite: #f7f7f7;
+$black: #222;
+$font-family: 'Segoe UI', 'Noto Sans TC', Arial, sans-serif;
 
-body {
-  font-family: 'Segoe UI', 'Noto Sans TC', Arial, sans-serif;
-  margin: 0;
-  background: #f7f7f7;
-  color: #222;
-}
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
-header {
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 16px 0;
-  position: relative;
-}
-.logo {
-  font-size: 2rem;
-  color: #2a7ae4;
-  font-weight: bold;
-  margin: 0;
-  letter-spacing: 2px;
-}
-nav {
-  float: right;
-}
-nav a {
-  color: #222;
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-/* 新增：手機版漢堡選單樣式 */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  margin-left: 16px;
-}
-.hamburger span {
-  height: 4px;
-  width: 100%;
-  background: #2a7ae4;
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-@media (max-width: 900px) {
-  nav {
-    float: none;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background: #fff;
-    width: 180px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    flex-direction: column;
-    align-items: flex-start;
-    display: none;
-    z-index: 100;
-  }
-  nav.active {
-    display: flex;
-  }
-  nav a {
-    margin: 16px 0 0 24px;
-    font-size: 1.1rem;
-  }
-  .hamburger {
-    display: flex;
-  }
-}
+
+
+
 .hero {
   background: linear-gradient(90deg, #2a7ae4 0%, #6ec1e4 100%);
   color: #fff;
@@ -213,7 +140,7 @@ nav a {
   text-align: left;
 }
 .cart-table th {
-  background: #f7f7f7;
+  background: $lightwhite;
 }
 .cart-total {
   text-align: right;
@@ -221,7 +148,7 @@ nav a {
   margin-bottom: 24px;
 }
 footer {
-  background: #222;
+  background: $black;
   color: #fff;
   text-align: center;
   padding: 24px 0 12px 0;
