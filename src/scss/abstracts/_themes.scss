@@ -25,10 +25,14 @@ $themes: (
       --#{$k}: #{$v};
     }
 
-    // 3. 衍生色：primary-hover 深 10 %
+    // 3. 衍生色：${資訊等級}-hover 深 10 %
     --primary-hover: #{color.scale(
         map.get($colors, primary),
         $lightness: -10%
       )};
+    --secondary-hover: #{color.scale(
+      map.get($colors, secondary),
+      $lightness: -10%
+    )};
   }
 }

@@ -1,0 +1,27 @@
+
+.btn {
+  border: none;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;  
+
+  &-primary {
+    background: var(--primary);
+    color: var(--text);
+    &:hover {
+        background: var(----primary-hover);
+    }
+  }
+  &-secondary {
+    background: var(--secondary);
+    color: var(--text);
+    &:hover {
+        background: var(--secondary-hover);
+    }
+  }
+}
+

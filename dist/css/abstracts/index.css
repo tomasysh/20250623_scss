@@ -4,6 +4,7 @@ body.theme-light {
   --primary: #2a7ae4;
   --secondary: #6ec1e4;
   --primary-hover: rgb(27.3375, 108.3375, 215.6625);
+  --secondary-hover: rgb(81.5058139535, 180.8162790698, 222.6941860465);
 }
 
 body.theme-dark {
@@ -12,6 +13,7 @@ body.theme-dark {
   --primary: #1abc9c;
   --secondary: #145a32;
   --primary-hover: rgb(23.4, 169.2, 140.4);
+  --secondary-hover: #12512d;
 }
 
 /*# sourceMappingURL=index.css.map */

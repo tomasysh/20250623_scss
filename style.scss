@@ -4,40 +4,6 @@ $black: #222;
 $font-family: 'Segoe UI', 'Noto Sans TC', Arial, sans-serif;
 
 
-
-
-.btn-primary {
-  background: #2a7ae4;
-  color: #fff;
-  border: none;
-  padding: 12px 32px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-primary:hover {
-  background: #1a5bb8;
-}
-.btn-secondary {
-  background: #fff;
-  color: #2a7ae4;
-  border: 2px solid #2a7ae4;
-  padding: 10px 24px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-secondary:hover {
-  background: #2a7ae4;
-  color: #fff;
-}
-
 .features {
   display: flex;
   justify-content: space-between;
