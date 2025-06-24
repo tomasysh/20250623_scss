@@ -8,11 +8,11 @@ body.theme-light {
 }
 
 body.theme-dark {
-  --bg: #121212;
-  --text: #e6e6e6;
-  --primary: #90caf9;
-  --secondary: #6ec1e4;
-  --primary-hover: rgb(106.7153846154, 184.1974358974, 246.9846153846);
+  --bg: #10241b;
+  --text: #e6ffe6;
+  --primary: #1abc9c;
+  --secondary: #145a32;
+  --primary-hover: rgb(23.4, 169.2, 140.4);
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 }
 
 header {
-  background: #fff;
+  background: var(--bg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   padding: 16px 0;
   position: relative;
@@ -39,7 +39,7 @@ header {
 
 .logo {
   font-size: 2rem;
-  color: #2a7ae4;
+  color: var(--primary);
   font-weight: bold;
   margin: 0;
   letter-spacing: 2px;
@@ -71,7 +71,7 @@ nav a {
 .hamburger span {
   height: 4px;
   width: 100%;
-  background: #2a7ae4;
+  background: var(--parimary);
   margin: 5px 0;
   border-radius: 2px;
   transition: 0.3s;
@@ -83,7 +83,7 @@ nav a {
     position: absolute;
     top: 64px;
     right: 0;
-    background: #fff;
+    background: var(--bg);
     width: 180px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     flex-direction: column;
