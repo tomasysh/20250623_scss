@@ -16,6 +16,46 @@
  * Tomastrap root v0.0.1 (https://github.com/tomasysh/20250624_scss/)
  * 版權所有
  */
+.m-1 {
+  margin: 4px;
+}
+
+.m-2 {
+  margin: 8px;
+}
+
+.m-3 {
+  margin: 16px;
+}
+
+.m-4 {
+  margin: 24px;
+}
+
+.m-5 {
+  margin: 32px;
+}
+
+.fs-1 {
+  font-size: 24px;
+}
+
+.fs-2 {
+  font-size: 20px;
+}
+
+.fs-3 {
+  font-size: 16px;
+}
+
+.fs-4 {
+  font-size: 14px;
+}
+
+.fs-5 {
+  font-size: 12px;
+}
+
 .col-1 {
   width: 8.3333333333%;
 }
