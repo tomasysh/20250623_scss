@@ -1,83 +1,18 @@
-@charset "UTF-8";
-.container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 2 |   background: $black;
+ *   |               ^^^^^^
+ *   '
+ *   src/scss/layout/_footer.scss 2:15  @forward
+ *   src/scss/layout/index.scss 3:1     root stylesheet */
 
-header {
-  background: var(--bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 16px 0;
-  position: relative;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 2 \2502    background: $black;\a   \2502                ^^^^^^\a   \2575 \a   src/scss/layout/_footer.scss 2:15  @forward\a   src/scss/layout/index.scss 3:1     root stylesheet";
 }
-
-.logo {
-  font-size: 2rem;
-  color: var(--primary);
-  font-weight: bold;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-nav {
-  float: right;
-}
-
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-/* 新增：手機版漢堡選單樣式 */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  margin-left: 16px;
-}
-
-.hamburger span {
-  height: 4px;
-  width: 100%;
-  background: var(--parimary);
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-@media (max-width: 900px) {
-  nav {
-    float: none;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background: var(--bg);
-    width: 180px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    flex-direction: column;
-    align-items: flex-start;
-    display: none;
-    z-index: 100;
-  }
-  nav.active {
-    display: flex;
-  }
-  nav a {
-    margin: 16px 0 0 24px;
-    font-size: 1.1rem;
-  }
-  .hamburger {
-    display: flex;
-  }
-}
-
-/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,25 @@
+.cart {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 40px;
+  margin: 40px 0;
+}
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+.cart-table th, .cart-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.cart-table th {
+  background: $lightwhite;
+}
+.cart-total {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}

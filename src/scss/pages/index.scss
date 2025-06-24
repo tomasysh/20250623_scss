@@ -1,14 +1,4 @@
-.features {
-  display: flex;
-  justify-content: space-between;
-  margin: 40px 0;
-  gap: 24px;
-}
-.feature {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 32px 24px;
-  flex: 1;
-  text-align: center;
-}
+@forward 'home';
+@forward 'products';
+@forward 'product';
+@forward 'cart';

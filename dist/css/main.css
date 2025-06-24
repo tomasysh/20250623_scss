@@ -1,165 +1,19 @@
-@charset "UTF-8";
-body.theme-light {
-  --bg: #f7f7f7;
-  --text: #222;
-  --primary: #2a7ae4;
-  --secondary: #6ec1e4;
-  --primary-hover: rgb(27.3375, 108.3375, 215.6625);
-  --secondary-hover: rgb(81.5058139535, 180.8162790698, 222.6941860465);
-}
+/* Error: Undefined variable.
+ *   ,
+ * 2 |   background: $black;
+ *   |               ^^^^^^
+ *   '
+ *   src/scss/layout/_footer.scss 2:15  @forward
+ *   src/scss/layout/index.scss 3:1     @use
+ *   src/scss/main.scss 3:1             root stylesheet */
 
-body.theme-dark {
-  --bg: #10241b;
-  --text: #e6ffe6;
-  --primary: #1abc9c;
-  --secondary: #145a32;
-  --primary-hover: rgb(23.4, 169.2, 140.4);
-  --secondary-hover: #12512d;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 2 \2502    background: $black;\a   \2502                ^^^^^^\a   \2575 \a   src/scss/layout/_footer.scss 2:15  @forward\a   src/scss/layout/index.scss 3:1     @use\a   src/scss/main.scss 3:1             root stylesheet";
 }
-
-body {
-  font-family: "Segoe UI", "Noto Sans TC", Arial, sans-serif;
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-header {
-  background: var(--bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 16px 0;
-  position: relative;
-}
-
-.logo {
-  font-size: 2rem;
-  color: var(--primary);
-  font-weight: bold;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-nav {
-  float: right;
-}
-
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-/* 新增：手機版漢堡選單樣式 */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  margin-left: 16px;
-}
-
-.hamburger span {
-  height: 4px;
-  width: 100%;
-  background: var(--parimary);
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-@media (max-width: 900px) {
-  nav {
-    float: none;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background: var(--bg);
-    width: 180px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    flex-direction: column;
-    align-items: flex-start;
-    display: none;
-    z-index: 100;
-  }
-  nav.active {
-    display: flex;
-  }
-  nav a {
-    margin: 16px 0 0 24px;
-    font-size: 1.1rem;
-  }
-  .hamburger {
-    display: flex;
-  }
-}
-.hero {
-  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px 60px 20px;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 32px;
-}
-
-.btn {
-  border: none;
-  padding: 12px 32px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-primary {
-  background: var(--primary);
-  color: var(--text);
-}
-.btn-primary:hover {
-  background: var(----primary-hover);
-}
-.btn-secondary {
-  background: var(--secondary);
-  color: var(--text);
-}
-.btn-secondary:hover {
-  background: var(--secondary-hover);
-}
-
-.features {
-  display: flex;
-  justify-content: space-between;
-  margin: 40px 0;
-  gap: 24px;
-}
-
-.feature {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 32px 24px;
-  flex: 1;
-  text-align: center;
-}
-
-/*# sourceMappingURL=main.css.map */

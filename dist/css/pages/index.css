@@ -1,17 +1,18 @@
-.features {
-  display: flex;
-  justify-content: space-between;
-  margin: 40px 0;
-  gap: 24px;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 19 |   background: $lightwhite;
+ *    |               ^^^^^^^^^^^
+ *    '
+ *   src/scss/pages/_cart.scss 19:15  @forward
+ *   src/scss/pages/index.scss 4:1    root stylesheet */
 
-.feature {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 32px 24px;
-  flex: 1;
-  text-align: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 19 \2502    background: $lightwhite;\a    \2502                ^^^^^^^^^^^\a    \2575 \a   src/scss/pages/_cart.scss 19:15  @forward\a   src/scss/pages/index.scss 4:1    root stylesheet";
 }
-
-/*# sourceMappingURL=index.css.map */
