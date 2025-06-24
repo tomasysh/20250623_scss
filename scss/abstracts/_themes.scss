@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "sass:color";
+
+// 1. 主題色資料
+$themes: (
+  light: (
+    bg: #ffffff,
+    text: #222222,
+    primary: #1e90ff,
+  ),
+  dark: (
+    bg: #121212,
+    text: #e6e6e6,
+    primary: #90caf9,
+  )
+);
+
+// 2. 產出 CSS 變數 (--bg, --text, --primary…)
+@each $name, $colors in $themes {
+  body.theme-#{$name} {
+    @each $k, $v in $colors {
+      --#{$k}: #{$v};
+    }
+
+    // 3. 衍生色：primary-hover 深 10 %
+    --primary-hover: #{color.scale(
+        map.get($colors, primary),
+        $lightness: -10%
+      )};
+  }
+}

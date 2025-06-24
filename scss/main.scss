@@ -1,0 +1,7 @@
+@use 'abstracts/themes';     // 只為了執行輸出變數
+@use 'components/button';
+@use 'components/card';
+
+body {
+    background-color: var(--bg);
+}
