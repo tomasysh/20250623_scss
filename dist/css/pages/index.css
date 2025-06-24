@@ -1,18 +1,124 @@
-/* Error: Undefined variable.
- *    ,
- * 19 |   background: $lightwhite;
- *    |               ^^^^^^^^^^^
- *    '
- *   src/scss/pages/_cart.scss 19:15  @forward
- *   src/scss/pages/index.scss 4:1    root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 19 \2502    background: $lightwhite;\a    \2502                ^^^^^^^^^^^\a    \2575 \a   src/scss/pages/_cart.scss 19:15  @forward\a   src/scss/pages/index.scss 4:1    root stylesheet";
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+  gap: 24px;
 }
+
+.feature {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 32px 24px;
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .features {
+    flex-direction: column;
+  }
+}
+.product-list {
+  padding: 40px 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 24px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 16px rgba(42, 122, 228, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.product-card h3 {
+  margin: 12px 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.product-card .price {
+  color: #2a7ae4;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.product-detail {
+  display: flex;
+  gap: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 40px;
+  margin: 40px 0;
+  align-items: center;
+}
+
+.product-detail img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-info h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .product-detail {
+    flex-direction: column;
+    padding: 24px;
+  }
+}
+.cart {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 40px;
+  margin: 40px 0;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.cart-table th, .cart-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.cart-table th {
+  background: white;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+/*# sourceMappingURL=index.css.map */
