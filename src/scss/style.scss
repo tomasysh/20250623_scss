@@ -12,134 +12,164 @@
 
 @include tomasBanner();
 
-@each $key, $value in $spacings {
-    .m-#{$key} {
-        margin: $value;
-    }
-}
-
-@each $key, $value in $font-sizes {
-    .fs-#{$key} {
-        font-size: $value;
-    }
-}
-
-// 響應式 spacing
-@each $bp, $bp-width in $breakpoints {
-  @media (min-width: $bp-width) {
-    @each $m, $m-value in $spacings {
-      .m-#{$bp}-#{$m} { margin: $m-value; }
-      .p-#{$bp}-#{$m} { padding: $m-value; }
-    }
-  }
-}
-
-@each $bp, $bp-width in $breakpoints {
-  @media (min-width: $bp-width) {
-    @each $fs, $fs-value in $font-sizes {
-      .fs-#{$bp}-#{$fs} { margin: $fs-value; }
-    }
-  }
-}
-
-$cols: 1 2 3 4 5 6 7 8 9 10 11 12;
-
-@each $col in $cols {
-  .col-#{$col} {
-    width:  calc(100% / 12) * $col;
-  }
-}
-
-$displays: (
-  flex: flex,
-  block: block,
-  inline: inline-block
+$themes: (
+  light: (
+    bg: #ffffff,
+    text: #222222,
+    primary: #1e90ff
+  ),
+  dark: (
+    bg: #1e1e1e,
+    text: #f0f0f0,
+    primary: #ff9800
+  ),
+  brand: (
+    bg: #fef6e4,
+    text: #172c66,
+    primary: #f582ae
+  )
 );
 
-@each $name, $value in $displays {
-  .d-#{$name} {
-    display: $value;
-  }
-}
+@each $theme, $colors in $themes {
+  body.theme-#{$theme} {
+    background-color: map-get($colors, bg);
+    color: map-get($colors, text);
 
-$justifies: (
-  start: flex-start,
-  center: center,
-  end: flex-end,
-  between: space-between,
-  around: space-around
-);
-
-@each $key, $val in $justifies {
-  .justify-#{$key} {
-    justify-content: $val;
-  }
-}
-
-$items: (
-  start: flex-start,
-  center: center,
-  end: flex-end,
-  stretch: stretch
-);
-
-@each $key, $val in $items {
-  .items-#{$key} {
-    align-items: $val;
-  }
-}
-
-$cursors: (
-    pointer: pointer,
-    wait: wait,
-    cross: crosshair,
-);
-
-@each $key, $val in $cursors {
-    .cursor-#{$key} {
-        cursor: $val !important;
+    button {
+      background-color: map-get($colors, primary);
+      color: map-get($colors, text);
     }
-}
-
-nav {
-  ul {
-    margin: 0;
-    padding: variables.$padding;
-    list-style: none;
-  }
-
-  li { display: inline-block; }
-
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-    color: variables.$primary;
   }
 }
 
+// @each $key, $value in $spacings {
+//     .m-#{$key} {
+//         margin: $value;
+//     }
+// }
 
-// .btn .btn-primary
-// .btn .btn-danger
+// @each $key, $value in $font-sizes {
+//     .fs-#{$key} {
+//         font-size: $value;
+//     }
+// }
 
-.card {
-    @extend %card-base;
+// // 響應式 spacing
+// @each $bp, $bp-width in $breakpoints {
+//   @media (min-width: $bp-width) {
+//     @each $m, $m-value in $spacings {
+//       .m-#{$bp}-#{$m} { margin: $m-value; }
+//       .p-#{$bp}-#{$m} { padding: $m-value; }
+//     }
+//   }
+// }
 
-    &-info {
-        background: lightblue;
-    }
+// @each $bp, $bp-width in $breakpoints {
+//   @media (min-width: $bp-width) {
+//     @each $fs, $fs-value in $font-sizes {
+//       .fs-#{$bp}-#{$fs} { margin: $fs-value; }
+//     }
+//   }
+// }
 
-    &__title {
-        font-size: 1.5rem;
-        color: variables.$primary;
-        margin-bottom: functions.spacing(10);
-        font-weight: 700;
-        letter-spacing: 0.02em;
-    }
+// $cols: 1 2 3 4 5 6 7 8 9 10 11 12;
 
-    &__body {
-        font-size: 1.125rem;
-        color: #333;
-        line-height: 1.7;
-    }
-}
+// @each $col in $cols {
+//   .col-#{$col} {
+//     width:  calc(100% / 12) * $col;
+//   }
+// }
+
+// $displays: (
+//   flex: flex,
+//   block: block,
+//   inline: inline-block
+// );
+
+// @each $name, $value in $displays {
+//   .d-#{$name} {
+//     display: $value;
+//   }
+// }
+
+// $justifies: (
+//   start: flex-start,
+//   center: center,
+//   end: flex-end,
+//   between: space-between,
+//   around: space-around
+// );
+
+// @each $key, $val in $justifies {
+//   .justify-#{$key} {
+//     justify-content: $val;
+//   }
+// }
+
+// $items: (
+//   start: flex-start,
+//   center: center,
+//   end: flex-end,
+//   stretch: stretch
+// );
+
+// @each $key, $val in $items {
+//   .items-#{$key} {
+//     align-items: $val;
+//   }
+// }
+
+// $cursors: (
+//     pointer: pointer,
+//     wait: wait,
+//     cross: crosshair,
+// );
+
+// @each $key, $val in $cursors {
+//     .cursor-#{$key} {
+//         cursor: $val !important;
+//     }
+// }
+
+// nav {
+//   ul {
+//     margin: 0;
+//     padding: variables.$padding;
+//     list-style: none;
+//   }
+
+//   li { display: inline-block; }
+
+//   a {
+//     display: block;
+//     padding: 6px 12px;
+//     text-decoration: none;
+//     color: variables.$primary;
+//   }
+// }
+
+
+// // .btn .btn-primary
+// // .btn .btn-danger
+
+// .card {
+//     @extend %card-base;
+
+//     &-info {
+//         background: lightblue;
+//     }
+
+//     &__title {
+//         font-size: 1.5rem;
+//         color: variables.$primary;
+//         margin-bottom: functions.spacing(10);
+//         font-weight: 700;
+//         letter-spacing: 0.02em;
+//     }
+
+//     &__body {
+//         font-size: 1.125rem;
+//         color: #333;
+//         line-height: 1.7;
+//     }
+// }
