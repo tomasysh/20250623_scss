@@ -25,30 +25,22 @@
 }
 
 // 響應式 spacing
-@mixin responsive-spacing($property, $class-prefix, $map) {
-    @each $bp, $bp-width in $breakpoints {
-        @media (min-width: $bp-width) {
-            @each $key, $value in $map {
-                .#{$class-prefix}-#{$bp}-#{$key} { #{$property}: $value; }
-            }
-        }
+@each $bp, $bp-width in $breakpoints {
+  @media (min-width: $bp-width) {
+    @each $m, $m-value in $spacings {
+      .m-#{$bp}-#{$m} { margin: $m-value; }
+      .p-#{$bp}-#{$m} { padding: $m-value; }
     }
+  }
 }
 
-@include responsive-spacing(margin, m, $spacings);
-@include responsive-spacing(padding, p, $spacings);
-
-@mixin responsive-font-size($property, $class-prefix, $map) {
-    @each $bp, $bp-width in $breakpoints {
-        @media (min-width: $bp-width) {
-            @each $key, $value in $map {
-                .#{$class-prefix}-#{$bp}-#{$key} { #{$property}: $value; }
-            }
-        }
+@each $bp, $bp-width in $breakpoints {
+  @media (min-width: $bp-width) {
+    @each $fs, $fs-value in $font-sizes {
+      .fs-#{$bp}-#{$fs} { margin: $fs-value; }
     }
+  }
 }
-
-@include responsive-font-size(margin, fs, $font-sizes);
 
 $cols: 1 2 3 4 5 6 7 8 9 10 11 12;
 
