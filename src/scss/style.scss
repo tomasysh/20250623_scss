@@ -2,6 +2,15 @@
 @use 'functions';
 @use 'abstracts';
 
+@mixin tomasBanner($file: root) {
+  /*!
+   * Tomastrap #{$file} v0.0.1 (https://github.com/tomasysh/20250624_scss/)
+   * 版權所有
+   */
+}
+
+@include tomasBanner();
+
 $cols: 1 2 3 4 5 6 7 8 9 10 11 12;
 
 @each $col in $cols {
