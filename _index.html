@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zn-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <button type="button" class="btn" data-theme="light">Light</button>
+    <button type="button" class="btn" data-theme="dark">Dark</button>
+
+    <script>
+    document.addEventListener('click', e => {
+        if (!e.target.dataset.theme) return;
+        document.body.className = `theme-${e.target.dataset.theme}`;
+    });
+    </script>
+</body>
+</html>

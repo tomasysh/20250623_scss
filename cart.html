@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>現代電商購物網站</title>
+  <title>購物車 - ShopNow</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,24 +23,33 @@
     </div>
   </header>
   <main>
-    <section class="hero">
-      <h2>歡迎來到 ShopNow</h2>
-      <p>發現最新、最熱門的商品，享受現代化購物體驗！</p>
-      <a href="products.html" class="btn-primary">立即逛逛</a>
-    </section>
-    <section class="features">
-      <div class="feature">
-        <h3>快速配送</h3>
-        <p>下單後 24 小時內出貨，快速送達。</p>
+    <section class="cart">
+      <h2>購物車</h2>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>商品</th>
+            <th>數量</th>
+            <th>單價</th>
+            <th>小計</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>商品名稱 1</td>
+            <td>1</td>
+            <td>$999</td>
+            <td>$999</td>
+            <td><button class="btn-secondary">移除</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cart-total">
+        <span>總計：</span>
+        <span class="total-price">$999</span>
       </div>
-      <div class="feature">
-        <h3>安全付款</h3>
-        <p>多元安全付款方式，保障您的交易安全。</p>
-      </div>
-      <div class="feature">
-        <h3>精選商品</h3>
-        <p>嚴選高品質商品，滿足您的各種需求。</p>
-      </div>
+      <button class="btn-primary">前往結帳</button>
     </section>
   </main>
   <footer>
