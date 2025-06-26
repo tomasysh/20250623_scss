@@ -1,0 +1,62 @@
+// @import "../../node_modules/bootstrap/scss/functions";
+// @import "../../node_modules/bootstrap/scss/variables";
+// @import "../../node_modules/bootstrap/scss/variables-dark";
+// @import "../../node_modules/bootstrap/scss/maps";
+// @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/utilities";
+// @import "../../node_modules/bootstrap/scss/buttons";
+
+
+// @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// $extra-btns: (
+//   "turquoise": #20c997,
+//   "flamingo":  #ff6b6b,
+//   "orange":    #ffa94d
+// );
+
+// @each $name, $value in $extra-btns {
+//   .btn-#{$name} {
+//     @include button-variant(
+//       $background: $value,
+//       $border: $value,
+//       $color: if(contrast-ratio($value, #fff) < 4.5, #212529, #fff) // 確保可讀性
+//     );
+//   }
+// }
+
+@use 'sass:map';
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+
+$custom-colors: (
+    "special": greenyellow
+) !default;
+
+.my-section {
+  // ≥lg 顯示 3 欄
+  @include media-breakpoint-up(lg) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  // <lg 改為單欄
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.custom-container {
+  @include make-container();
+  max-width: 90%;
+}
+
+$theme-colors: map-merge($theme-colors , $custom-colors);
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="dist/css/custom.css" rel="stylesheet">
+</head>
+<body class="overlay">
+
+    <h1>hello</h1>
+
+    <div class="my-section">
+        <div class="btn btn-special">HELLO1</div>
+        <div class="btn btn-secondary">HELLO2</div>
+        <div class="btn btn-primary">HELLO3</div>
+    </div>
+    
+        <button id="themeToggle" class="btn btn-outline-secondary position-fixed bottom-0 end-0 m-4">
+    切換主題
+    </button>
+
+    <script>
+    const body = document.documentElement            // <html>
+    themeToggle.onclick = () => {
+    body.dataset.bsTheme = body.dataset.bsTheme === 'dark' ? 'light' : 'dark'
+    }
+    </script>
+</body>
+</html>
