@@ -1,0 +1,17 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+$extra-btns: (
+  "turquoise": #20c997,
+  "flamingo":  #ff6b6b,
+  "orange":    #ffa94d
+);
+
+@each $name, $value in $extra-btns {
+  .btn-#{$name} {
+    @include button-variant(
+      $background: $value,
+      $border: $value,
+      $color: if(contrast-ratio($value, #fff) < 4.5, #212529, #fff) // 確保可讀性
+    );
+  }
+}
